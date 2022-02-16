@@ -1,0 +1,447 @@
+/**
+ * @name zelk-patches
+ * @author Rendoe#0736
+ * @version 1.0.0
+ * @description Zelk theme custom modifications, combination of other themes (Dark Discord, GradientButtons v2, Amazing Activity Cards, Pop) + small modifications using code from css-snippets in Powercord's Discord Server. [Use with Zelk Theme] 
+ * @source https://github.com/zespire/zelk-patches
+ */
+
+
+/* ================================================ */
+			  /*** Themes Modules (Other Themes) ***/
+/* ================================================ */
+
+/** Amazing Activity Cards Theme (Got permission from LuckFire)**/
+/* -Makes Discord's normal activity cards look a bit nicer. */
+@import url('https://raw.githack.com/Discord-Theme-Addons/amazing-activity-cards/master/src/support/AmazingActivityCards.theme.css');
+
+/** Gradient Buttons v2 Theme (Got permission from LuckFire)**/
+/* -Add some spice to your buttons.. with gradients! */
+@import url('https://raw.githack.com/Discord-Theme-Addons/gradientbuttons-v2/main/src/support/GradientButtons.theme.css');
+
+/** Pop Theme (Got permission from Devin)**/
+/* Discord theme that makes UI elements 'pop out' on hover. */
+@import url('https://raw.githack.com/devinkid1/Pop/main/Pop.theme.css');
+
+/** Channel Icons **/
+/* -adds icon to channels */
+@import url('https://raw.githack.com/v-briese/Channel-Icons/main/channelicons.theme.css');
+
+/** Round Stuff **/
+/* -rounds things */
+@import url(https://raw.githack.com/leeprky/MyThemesBasesStuffYeah/lode/round-stuff.css);
+
+
+/* server list lag fix in linux */
+.wrapper-25eVIn svg {
+    overflow: hidden;
+}
+
+
+/* ================================================ */
+  /*** Small Theme Modifications (css-snippets) ***/
+/* ================================================ */
+
+/*Light shadows under embedded messages, images, videos and code blocks*/
+.embedWrapper-lXpS3L {
+  box-shadow: 0px 8px 15px -8px rgba(0,0,0,0.3);
+}
+code {
+  box-shadow: 0px 8px 15px -8px rgba(0,0,0,0.3);
+}
+
+/*rounded context menu*/
+.item-1tOPte, .menu-3sdvDG.styleFlexible-wGDiIL { 
+  border-radius: 12px; 
+}
+.submenu-2-ysNh.menu-3sdvDG { 
+  border-radius: 21px; 
+}
+.powercord-product-header {
+    margin: 0 !important;
+    order: -2;
+    flex: 1 1 60%;
+}
+.powercord-product-details {
+    width: 100%;
+}
+.powercord-product .description, .powercord-product .metadata, .powercord-product-permissions {
+    margin: 0 !important;
+    margin-top: 6px !important;
+    color: var(--header-secondary);
+    font-size: 14px;
+}
+.powercord-product .metadata .author {
+    flex-grow: 1;
+}
+.powercord-product .metadata .license {
+    justify-content: flex-end;
+    width: auto !important;
+    margin-left: 20px !important;
+}
+.powercord-product .metadata .version {
+    width: 105px !important;
+    order: 2;
+    justify-content: flex-end;
+}
+.powercord-product .metadata .version > div {
+    margin-right: 0 !important;
+}
+.powercord-product .metadata .version > div:first-child,
+.powercord-product .metadata .license > div:first-child {
+    order: 2;
+    margin-right: 0 !important;
+    margin-left: 5px !important;
+}
+.powercord-product .metadata .license > div:last-child,
+.powercord-product .metadata .author > div:first-child {
+    margin-right: 4px !important;
+}
+.powercord-product-footer {
+    margin: 0 !important;
+    order: -1;
+    margin-left: 6px !important;
+}
+.powercord-product-footer .lookFilled-1Gx00P.colorRed-1TFJan {
+    border-radius: 100px;
+    padding: 0 !important;
+    height: 24px !important;
+    min-height: unset !important;
+    min-width: unset !important;
+    padding: 0 8px !important;
+}
+.powercord-product .dividerDefault-3rvLe-,
+.powercord-product .description > div:first-child { 
+    display: none;
+}
+
+
+/* round button containers which u see on hovering*/
+.wrapper-2aW0bm,.button-1ZiXG9.selected-LCBEAU,.button-1ZiXG9,.powercord-snippet-apply:not(.applied) div:hover,.powercord-snippet-apply div  {
+    border-radius: 24px !important;
+}
+
+/*Round Channel Highlight*/
+.content-1x5b-n,
+.layout-2DM8Md {
+    border-radius: 50px;
+}
+
+
+/* Dark Activity */
+.activityUserPopout-2yItg2 {
+  background-color: rgb(28,28,28);
+}
+:root {
+  	--activity-box-shadow: #1C1C1C;
+		--default-bg: #1C1C1C;
+    --default-bg-backdrop: #1C1C1C;
+    --xbox-bg: #1C1C1C;
+    --xbox-bg-backdrop: #1C1C1C;
+    --spotify-bg: #1C1C1C;
+    --spotify-bg-backdrop: #1C1C1C;
+    --streaming-bg: #1C1C1C;
+    --streaming-bg-backdrop: #1C1C1C;
+}
+
+
+/* Better Jump to present*/
+.newMessagesBar-265mhP.barBase-1c2Rfb .barButtonAlt-mYL1lj.barButtonBase-2uLO1z {
+  width: 132px;
+}
+.jumpToPresentBar-G1R9s6.barBase-1c2Rfb {
+background-color: rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(5px);
+border-radius: 50px;
+margin-top: 5px;
+}
+.jumpToPresentBar-G1R9s6.barBase-1c2Rfb .barButtonAlt-mYL1lj.barButtonBase-2uLO1z {
+  width: 148px;
+}
+.newMessagesBar-265mhP {
+background-color: rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(5px);
+border-radius: 50px;
+margin-top: 5px;
+}
+
+
+/*  White discord join/explore servers buttons */
+.circleIconButton-1QV--U{
+    color: rgb(148, 148, 148);
+    background: var(--background-secondary);
+}
+
+.circleIconButton-1QV--U.selected-1JjBPm {
+    color: #fff;
+    background-color: rgb(66, 66, 66);
+}
+
+
+/*Better Role Display*/
+.role-2irmRk {
+  background-color: var(--background-tertiary);
+  border-radius: 4px;
+  border: none;
+  /*padding: 0 5px 0 8px;*/
+}
+.role-2irmRk.actionButton-VzECiy {
+  background-color: var(--background-tertiary);
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.role-2irmRk .roleCircle-3xAZ1j {
+  margin-right: 6px;
+  width: 9px;
+  height: 9px;
+}
+.perm-circle.roleCircle-3xAZ1j.flex-1O1GKY.alignCenter-1dQNNs.justifyCenter-3D2jYp {
+  margin-right: 6px;
+  width: 9px;
+  height: 9px;
+}
+
+
+/* lightens nitro boxes on hover*/
+.feature-2w65J5:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+
+/* pop out badges [bugged not working] */
+.profileBadge-2niAfJ:hover {
+    transform: scale(1.2);
+}
+
+
+/* Better Topbar*/
+:root {
+  --Roundness: 25px; /* Changes how round edges are | Default: 25px */
+}
+.children-19S4PO, .toolbar-1t6TWx {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: var( --Roundness);
+  padding: 5px;
+  height: 30px;
+}
+.children-19S4PO::after {
+  display: none;
+}
+.children-19S4PO {
+  margin-right: 20px;
+}
+.input-2A_zIr, .input-2A_zIr:hover {
+    background-color: rgba(255,255,255,0);
+  margin-left: 10px;
+  border-radius: var( --Roundness);
+}
+.divider-3FBTu8 {
+    width: 2px;
+  height: 20px;
+}
+svg > .updateIconForeground-3tnNZn {
+  fill: var(--interactive-normal);
+}
+svg:hover > .updateIconForeground-3tnNZn {
+  fill: var(--interactive-hover);
+} /* BUG - makes search button turn all white
+svg:active > .updateIconForeground-3tnNZn {
+  fill: var(--interactive-active); */
+}
+svg.icon-3cZ1F_ > path {
+  fill: var(--interactive-normal);
+}
+svg.icon-22AiRD {
+    color: var(--interactive-normal);
+}
+svg.icon-22AiRD:hover {
+    color: var(--interactive-hover);
+}
+.topic-TCb_qw {
+    color: var(--interactive-normal) !important;
+}
+.title-29uC1r {
+    color: var(--interactive-normal);
+}
+.title-29uC1r:hover {
+    color: var(--interactive-hover);
+}
+.status-1XNdyw:hover {
+    filter: brightness(1.5)!important
+}
+.channelName-qsg_a_ > div > .input-2A_zIr {
+    box-shadow: none !important;
+}
+
+
+/* Minified search bar - Just show an icon until your hover it*/
+.search-2oPWTC:not(.open-6_Y_aH) .searchBar-3dMhjb { 
+  transition: 0.25s; background-color: transparent;
+}
+.search-2oPWTC:not(.open-6_Y_aH):hover .searchBar-3dMhjb { 
+  width: 240px; transition: 0.25s; background-color: transparent; border-radius:
+}
+.search-2oPWTC:not(.open-6_Y_aH) .iconContainer-O4O2CN { 
+  transform: scale(1.2); transition: 0.25s;
+}
+.search-2oPWTC:not(.open-6_Y_aH):hover .iconContainer-O4O2CN { 
+  transform: scale(1); transition: 0.25s;
+}
+
+
+/* Better utilize space in server emoji settings */
+.emojiUploader-1f0pVx,
+div[class*="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6 marginBottom4-2qk4Hy"] {
+    display: none
+}
+
+.emojiRow-zIc7ZX {
+    display: inline-flex;
+    margin-right: 50px
+}
+
+/** Hide the 'Not seeing controls?' icon **/
+.powercord-spotify .flex-1xMQg5{
+  display: none;
+}
+
+
+/*hide translate button in the message bar (from message-translate plugin)*/
+.message-translate-settings-button{
+  position: fixed;
+  visibility: hidden;
+}
+
+
+/* Light theme away */
+html.theme-dark .theme-light {
+  --header-primary: #fff;
+  --header-secondary: #b9bbbe;
+  --text-normal: #dcddde;
+  --text-muted: #72767d;
+  --text-link: #00b0f4;
+  --channels-default: #8e9297;
+  --interactive-normal: #b9bbbe;
+  --interactive-hover: #dcddde;
+  --interactive-active: #fff;
+  --interactive-muted: #4f545c;
+  --background-primary: #36393f;
+  --background-secondary: #2f3136;
+  --background-secondary-alt: #292b2f;
+  --background-tertiary: #202225;
+  --background-accent: #4f545c;
+  --background-floating: #18191c;
+  --background-mobile-primary: #36393f;
+  --background-mobile-secondary: #2f3136;
+  --background-modifier-hover: rgba(79,84,92,0.16);
+  --background-modifier-active: rgba(79,84,92,0.24);
+  --background-modifier-selected: rgba(79,84,92,0.32);
+  --background-modifier-accent: hsla(0,0%,100%,0.06);
+  --scrollbar-thin-thumb: #202225;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #202225;
+  --scrollbar-auto-track: #2e3338;
+  --focus-primary: #00b0f4;
+}
+html.theme-dark .theme-light .root-1gCeng {
+  background-color: #36393f;
+  -webkit-box-shadow: 0 0 0 1px rgba(32,34,37,.6), 0 2px 10px 0 rgba(0,0,0,.2);
+  box-shadow: 0 0 0 1px rgba(32,34,37,.6), 0 2px 10px 0 rgba(0,0,0,.2);
+}
+html.theme-dark .theme-light .footer-2gL1pp {
+  background-color: #2f3136;
+  -webkit-box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
+  box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
+  color: var(--text-normal);
+}
+
+
+/*Fix for padding being added to voice connection*/
+.connection-3KRENF {
+  padding-bottom: 0;
+}
+
+
+/*Properly fix VCTimer margins by removing them completely*/
+.subtext-3CDbHg p {
+  margin: 0;
+}
+
+
+/* Bring Theme Toggler and BetterDiscord compatible plugins to top in settings*/
+.side-8zPYf6 > div[data-item-id="pc-moduleManager-themes"],
+.side-8zPYf6 > div[data-item-id="pc-moduleManager-themes"] ~ div { order: 3 }
+.side-8zPYf6 > div[data-item-id="theme-toggler"] { order: 2 !important; }
+.side-8zPYf6 > div[data-item-id="bdCompat"] { order: 1 !important; }
+.item-PXvHYJ[data-item-id=pc-updater] {
+    height: 4.65rem;
+    align-items: unset !important;
+}
+.item-PXvHYJ[data-item-id=pc-updater]::after {
+    position: absolute;
+    margin-top: 2.19rem;
+    border-top: 1px solid var(--background-modifier-accent);
+    line-height: 2.6rem;
+    width: 89.5%;
+    content: "Plugin Settings";
+    color: rgb(159, 159, 159);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+
+/*Spinning settings & top-right icons wiggle on hover */
+@keyframes wiggle {
+   0% { transform: skewX(9deg); } 
+   10% { transform: skewX(-8deg); } 
+   20% { transform: skewX(7deg); } 
+   30% { transform: skewX(-6deg); } 
+   40% { transform: skewX(5deg); } 
+   50% { transform: skewX(-4deg); } 
+   60% { transform: skewX(3deg); } 
+   70% { transform: skewX(-2deg); } 
+   80% { transform: skewX(1deg); } 
+   90% { transform: skewX(0deg); } 
+   100% { transform: skewX(0deg); } 
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.button-14-BFJ:hover {
+  animation: wiggle 0.9s;
+  background-color: transparent !important;
+}
+.clickable-3rdHwn:hover {
+  animation: wiggle 0.9s;
+  background-color: transparent !important;
+}
+.abutton-14-BFJ,[aria-label|="User Settings"]:hover {
+  animation: rotation 1.2s 1 linear;
+  background-color: transparent !important;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.abutton-14-BFJ,[aria-label|="Mute channel info"]:hover {
+  animation: wiggle 1.2s 1 linear;
+  background-color: transparent !important;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+/** Make the small nsfw badge red */
+[d="M19.8914 3.80204L22.2438 8.55654C22.5726 9.22119 22.0891 9.99999 21.3475 10L16.6179 10C15.8745 10 15.391 9.21769 15.7235 8.55279L18.1007 3.79829C18.4701 3.05951 19.5251 3.06172 19.8914 3.80204ZM18.4998 5H19.4999V7.5H18.4999L18.4998 5ZM18.4998 8.49887C18.4998 8.77589 18.7238 9 18.9998 9C19.2759 9 19.4999 8.77589 19.4999 8.49887C19.4999 8.22224 19.2759 7.99773 18.9998 7.99773C18.7238 7.99773 18.4998 8.22224 18.4998 8.49887Z"]{
+  fill:hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+}
+
+/* Make the small lock badge yellow */
+[d="M21.025 5V4C21.025 2.88 20.05 2 19 2C17.95 2 17 2.88 17 4V5C16.4477 5 16 5.44772 16 6V9C16 9.55228 16.4477 10 17 10H19H21C21.5523 10 22 9.55228 22 9V5.975C22 5.43652 21.5635 5 21.025 5ZM20 5H18V4C18 3.42857 18.4667 3 19 3C19.5333 3 20 3.42857 20 4V5Z"]{
+  fill:hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
+}

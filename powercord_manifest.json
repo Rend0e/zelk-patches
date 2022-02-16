@@ -1,0 +1,8 @@
+{
+    "name": "zelk-patches",
+    "description": "Zelk theme custom modifications, combination of other themes (Dark Discord, GradientButtons v2, Amazing Activity Cards, Pop) + small modifications using code from css-snippets in Powercord's Discord Server. [Use with Zelk Theme] ",
+    "version": "1.0.0",
+    "author": "Rendoe#0736",
+    "theme": "zelk-patches.css",
+    "license": "GNU GPLv3"
+}
